@@ -1,0 +1,14 @@
+@import "../../styles/partials/global";
+
+.comments-section {
+    padding: 0 1.4rem;
+    color: $text-dark;
+
+    @include breakpoint(desktop) {
+        @include wrapper();
+        width: 94%;
+        padding-right: 0 ;
+        padding-left: 0;
+        margin-right: 0;
+    }
+}

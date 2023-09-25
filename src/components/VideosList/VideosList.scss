@@ -1,0 +1,31 @@
+@import "../../styles/partials/global";
+
+.videos-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+
+    &__title {
+        color: $secondary-text-color-light-gray;
+        font-size: 1.1em;
+        margin: 1rem 0;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    @include breakpoint(tablet) {
+        @include wrapper();
+        width: 94%;
+        padding-right: 0;
+        margin-right: 0;
+    }
+
+    @include breakpoint(desktop) {
+        width: auto;
+        max-width: fit-content;
+        flex: 2;
+        row-gap: .5rem;
+    }
+}

@@ -1,0 +1,96 @@
+@import '../../styles/partials/global';
+
+.new-comment-form {
+    // Add Error Border color change : a 1px border using the color #D22D2D
+    border-bottom: 2px $border-color solid;
+    padding: 0 0 1rem 0;
+    margin: 0 1.4rem 1rem;
+
+    &__row {
+        display: flex;
+        column-gap: 1rem;
+        justify-content: center;
+        align-items: stretch;
+        padding: 0 1rem 0;
+    }
+
+    &__left-col {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+
+        padding-top: 1.85rem;
+    }
+
+    &__right-col {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+        flex: 3 1;
+    }
+
+    &__user-img {
+        @include avatar();
+    }
+
+    &__input-group {
+        display: flex;
+        row-gap: 0.25rem;
+        flex-direction: column;
+    }
+
+    &__label {
+        color: $secondary-text-color-light-gray;
+        font-weight: 500;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+    }
+
+    &__input {
+        @include input-style();
+        height: 140px;
+        padding: 1rem;
+    }
+
+    &__submit-btn {
+        @include btn-style('../../assets/Icons/add_comment.svg');
+    }
+}
+
+@include breakpoint(tablet) {
+    .new-comment-form {
+        @include wrapper();
+        justify-content: center;
+        align-items: center;
+        padding-right: 1rem;
+        margin-right: 0;
+        width: 92%;
+
+        &__row {
+            width: 100%;
+            margin-left: auto;
+        }
+
+        &__input-group {
+            flex: 1 1;
+        }
+
+        &__input {
+            @include input-style();
+            padding-top: .75rem;
+            overflow: hidden;
+        }
+
+        &__right-col {
+            flex-direction: row;
+            gap: 2rem;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        &__submit-btn {
+            width: 210px;
+            font-size: 1rem;
+        }
+    }
+}

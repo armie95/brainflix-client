@@ -1,0 +1,128 @@
+@import "../../styles/partials/global";
+
+.nav-link {
+    width: 100%;
+    order: 0;
+    text-align: center;
+    order: 5;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1rem 1rem;
+    gap: 1rem;
+
+    &__logo {
+        width: 150px;
+    }
+
+    &__search-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        row-gap: 1rem;
+        width: 100%;
+    }
+
+    &__profile-image-container {
+        flex: 0;
+        max-width: fit-content;
+    }
+
+    &__profile-image {
+        @include avatar();
+    }
+
+    &__search-input {
+        @include input-style();
+        flex: 2 1;
+        height: 2.5rem;
+        padding-left: 2.6rem;
+        background-image: url('../../assets/Icons/search.svg');
+        background-repeat: no-repeat;
+        background-position: 0.8rem center;
+
+        max-width: 83%;
+        width: 83%;
+        min-width: auto;
+
+
+    }
+
+    &__upload-btn {
+        @include btn-style("../../assets/Icons/upload.svg");
+        order: 1;
+    }
+
+    &__home-link {
+        display: block;
+        order: 0;
+    }
+
+    &__upload-link {
+        display: block;
+        width: 100%;
+        order: 4;
+    }
+}
+
+
+@include breakpoint(tablet) {
+    .nav {
+        flex-direction: row;
+
+        &__search-container {
+            column-gap: 1rem;
+            width: 70%;
+            max-width: 630px;
+            height: 50px;
+            margin-left: auto;
+        }
+
+        &__upload-btn {
+            @include btn-style("../../assets/Icons/upload.svg");
+            font-size: 1rem;
+            max-width: 200px;
+        }
+
+        &__search-input {
+            height: 40px;
+        }
+
+        &__profile-image-container {
+            order: 2;
+        }
+
+        &__upload-link {
+            width: 200px;
+            order: 2;
+        }
+    }
+
+    .nav-link {
+        max-width: 200px;
+        order: 0;
+    }
+}
+
+@include breakpoint(desktop) {
+    .nav {
+        @include wrapper();
+        flex-direction: row;
+
+        &__search-container {
+            column-gap: 1rem;
+            height: 50px;
+            margin-left: auto;
+        }
+
+        &__profile-image-container {
+            order: 2;
+        }
+    }
+}

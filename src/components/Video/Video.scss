@@ -1,0 +1,57 @@
+@import "../../styles/partials/global";
+
+.video {
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    cursor: pointer;
+
+    &__left-col {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 1 180px;
+        height: 100px;
+    }
+
+    &__right-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 2 1;
+
+        line-height: 1.45rem;
+
+        color: $text-dark;
+    }
+
+    &__img-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+
+        border-radius: 4px;
+        border: 1px $border-color solid;
+
+        background-color: $border-color;
+    }
+
+    &__img {
+        width: 100%;
+        aspect-ratio: 2/1.5;
+        object-fit: cover;
+    }
+
+    &__title {
+        font-weight: bold;
+        margin: 0;
+    }
+
+    &__channel {
+        margin: 0;
+    }
+}

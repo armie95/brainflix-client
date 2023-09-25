@@ -1,0 +1,14 @@
+@import "./styles/partials/global";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: Avenir, serif;
+    font-weight: 400;
+}
+
+
+.App {
+    position: relative;
+}
