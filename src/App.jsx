@@ -1,10 +1,13 @@
+console.log("✅ App.jsx is running");
+
 import './App.scss'
-import Router from './components/Router/Router'
+import AppRoutes from './components/Router/AppRoutes';
+
 
 function App() {
   return (
     <div className="App">
-      <Router />
+      < AppRoutes />
     </div>
   )
 }
