@@ -1,15 +1,10 @@
-console.log("✅ App.jsx is running");
-
-import './App.scss'
+import React from 'react';
 import AppRoutes from './components/Router/AppRoutes';
-
+import './App.scss'; // make sure style imports are here too
 
 function App() {
-  return (
-    <div className="App">
-      < AppRoutes />
-    </div>
-  )
+  return <AppRoutes />;
 }
 
-export default App
+export default App;
+
